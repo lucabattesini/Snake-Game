@@ -22,11 +22,18 @@ namespace Characters
             set;
         }
 
+        public int length
+        {
+            get;
+            private set;
+        }
+
         public DefaultSnake(int startX, int startY)
         {
             isAlive = true;
             X = startX;
             Y = startY;
+            length = 3;
         }
 
         public void Move()
@@ -39,9 +46,10 @@ namespace Characters
             Dx = newDx;
             Dy = newDy;
         }
-        public void Collide()
+
+        public void Increase()
         {
-            isAlive = false;
+            length += 1;
         }
         
     }
