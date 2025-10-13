@@ -1,0 +1,15 @@
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.AssemblyInfoInputs.cache
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.AssemblyInfo.cs
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.csproj.CoreCompileInputs.cache
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.sourcelink.json
+/home/luca/Documents/code/projects/SnakeGame/bin/Debug/net8.0/SnakeGame
+/home/luca/Documents/code/projects/SnakeGame/bin/Debug/net8.0/SnakeGame.deps.json
+/home/luca/Documents/code/projects/SnakeGame/bin/Debug/net8.0/SnakeGame.runtimeconfig.json
+/home/luca/Documents/code/projects/SnakeGame/bin/Debug/net8.0/SnakeGame.dll
+/home/luca/Documents/code/projects/SnakeGame/bin/Debug/net8.0/SnakeGame.pdb
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.dll
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/refint/SnakeGame.dll
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.pdb
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/SnakeGame.genruntimeconfig.cache
+/home/luca/Documents/code/projects/SnakeGame/obj/Debug/net8.0/ref/SnakeGame.dll
