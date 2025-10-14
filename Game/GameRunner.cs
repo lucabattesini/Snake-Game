@@ -1,5 +1,6 @@
 using Characters;
 using Map;
+using Food;
 
 namespace Game
 {
@@ -7,11 +8,13 @@ namespace Game
     {
         private DefaultSnake snake;
         private DefaultMap map;
+        private Apple fruit;
 
         public GameRunner()
         {
             map = new DefaultMap(40, 40);
             snake = new DefaultSnake(5, 5);
+            fruit = new Apple(10, 10);
             Console.CursorVisible = false;
         }
 
@@ -54,12 +57,19 @@ namespace Game
                     snake.isAlive = false;
                 }
 
-                map.Draw(snake.X, snake.Y);
+                if (snake.X == fruit.X && snake.Y == fruit.Y)
+                {
+                    fruit.Eaten(map.Width, map.Height);
+                    snake.Increase();
+                }
+
+                map.Draw(snake.X, snake.Y, fruit.X, fruit.Y);
                 Thread.Sleep(200);
             }
 
             Console.Clear();
-            Console.WriteLine("Fim de jogo");
+            Console.WriteLine("The game has ended");
+            Console.WriteLine($"You have {fruit.Points} points");
         }
     }
 }

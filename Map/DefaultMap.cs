@@ -13,7 +13,7 @@ namespace Map
             Width = width;
         }
 
-        public void Draw(int snakeX, int snakeY)
+        public void Draw(int snakeX, int snakeY, int fruitX, int fruitY)
         {
             Console.Clear();
 
@@ -21,10 +21,15 @@ namespace Map
             {
                 for (int x = 0; x < Width; x++)
                 {
-                    if (y == 0 || y == Height -1 || x == 0 || x == Width - 1)
+                    if (y == 0 || y == Height - 1 || x == 0 || x == Width - 1)
                         Console.Write("#");
+                        
                     if (x == snakeX && y == snakeY)
                         Console.Write("0");
+
+                    if (x == fruitX && y == fruitY)
+                        Console.Write("*");
+
                     else
                         Console.Write("  ");
                 }

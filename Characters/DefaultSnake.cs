@@ -16,6 +16,8 @@ namespace Characters
             private set;
         }
 
+        
+
         public bool isAlive
         {
             get;
