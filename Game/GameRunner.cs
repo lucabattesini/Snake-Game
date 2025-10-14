@@ -12,7 +12,7 @@ namespace Game
 
         public GameRunner()
         {
-            map = new DefaultMap(40, 40);
+            map = new DefaultMap(20, 60);
             snake = new DefaultSnake(5, 5);
             fruit = new Apple(10, 10);
             Console.CursorVisible = false;
@@ -63,7 +63,7 @@ namespace Game
                     snake.Increase();
                 }
 
-                map.Draw(snake.X, snake.Y, fruit.X, fruit.Y);
+                map.Draw(snake.X, snake.Y, fruit.X, fruit.Y, snake.BodyX, snake.BodyY);
                 Thread.Sleep(200);
             }
 

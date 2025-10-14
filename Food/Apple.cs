@@ -29,8 +29,8 @@ namespace Food
         {
             Random random = new Random();
 
-            X = random.Next(0, rangeX);
-            Y = random.Next(0, rangeY);
+            X = random.Next(1, rangeX -1);
+            Y = random.Next(1, rangeY -1);
             Points += 1;
         }
     }

@@ -16,7 +16,8 @@ namespace Characters
             private set;
         }
 
-        
+        public List<int> BodyX = new List<int>();
+        public List<int> BodyY = new List<int>();
 
         public bool isAlive
         {
@@ -24,22 +25,23 @@ namespace Characters
             set;
         }
 
-        public int length
-        {
-            get;
-            private set;
-        }
-
         public DefaultSnake(int startX, int startY)
         {
             isAlive = true;
             X = startX;
             Y = startY;
-            length = 3;
+            BodyX.AddRange(new int[] { X-1, X-2 });
+            BodyY.AddRange(new int[] { Y-1, Y-2 });
         }
 
         public void Move()
         {
+            BodyX.Add(X);
+            BodyY.Add(Y);
+
+            BodyX.RemoveAt(0);
+            BodyY.RemoveAt(0);
+
             X += Dx;
             Y += Dy;
         }
@@ -51,7 +53,8 @@ namespace Characters
 
         public void Increase()
         {
-            length += 1;
+            BodyX.Insert(0, BodyX[0]);
+            BodyY.Insert(0, BodyY[0]);
         }
         
     }
