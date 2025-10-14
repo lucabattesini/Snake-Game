@@ -57,6 +57,14 @@ namespace Game
                     snake.isAlive = false;
                 }
 
+                for (int i = 0; i < snake.BodyX.Count && i < snake.BodyY.Count; i++)
+                {
+                    if (snake.BodyX[i] == snake.X && snake.BodyY[i] == snake.Y)
+                    {
+                        snake.isAlive = false;
+                    }
+                }
+
                 if (snake.X == fruit.X && snake.Y == fruit.Y)
                 {
                     fruit.Eaten(map.Width, map.Height);
