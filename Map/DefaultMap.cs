@@ -16,7 +16,7 @@ namespace Map
         public void Draw(int snakeX, int snakeY, int fruitX, int fruitY, List<int> bodyX, List<int> bodyY)
         {
             Console.Clear();
-            Console.WriteLine(new string('=', 25) + "SNAKE GAME" + new string('=', 25));
+            Console.WriteLine(new string('=', 15) + "SNAKE GAME" + new string('=', 15));
 
             for (int y = 0; y < Height; y++)
             {
