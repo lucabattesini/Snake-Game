@@ -16,29 +16,30 @@ namespace Map
         public void Draw(int snakeX, int snakeY, int fruitX, int fruitY, List<int> bodyX, List<int> bodyY)
         {
             Console.Clear();
+            Console.WriteLine(new string('=', 25) + "SNAKE GAME" + new string('=', 25));
 
             for (int y = 0; y < Height; y++)
             {
                 for (int x = 0; x < Width; x++)
                 {
-                    var toDraw = " ";
+                    var toDraw = "  ";
 
                     if (y == 0 || y == Height - 1 || x == 0 || x == Width - 1)
-                        toDraw = "#" ;
+                        toDraw = "# " ;
 
                     if (x == snakeX && y == snakeY)
-                        toDraw = "0";
+                        toDraw = "0 ";
 
                     for (int i = 0; i < bodyX.Count && i < bodyY.Count; i++)
                     {
                         if (bodyX[i] == x && bodyY[i] == y)
                         {
-                            toDraw = "o";
+                            toDraw = "o ";
                         }
                     }
 
                     if (x == fruitX && y == fruitY)
-                        toDraw = "*";
+                        toDraw = "* ";
 
                     Console.Write(toDraw);
                 }

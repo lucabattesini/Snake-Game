@@ -12,7 +12,7 @@ namespace Game
 
         public GameRunner()
         {
-            map = new DefaultMap(20, 60);
+            map = new DefaultMap(20, 20);
             snake = new DefaultSnake(5, 5);
             fruit = new Apple(10, 10);
             Console.CursorVisible = false;
@@ -51,8 +51,8 @@ namespace Game
                 ReadKeys();
                 snake.Move();
 
-                if (snake.X < 0 || snake.X >= map.Width ||
-                snake.Y < 0 || snake.Y >= map.Height)
+                if (snake.X < 1 || snake.X >= map.Width - 1||
+                snake.Y < 1 || snake.Y >= map.Height -1)
                 {
                     snake.isAlive = false;
                 }
@@ -72,7 +72,7 @@ namespace Game
                 }
 
                 map.Draw(snake.X, snake.Y, fruit.X, fruit.Y, snake.BodyX, snake.BodyY);
-                Thread.Sleep(200);
+                Thread.Sleep(100);
             }
 
             Console.Clear();
